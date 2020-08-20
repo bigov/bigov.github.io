@@ -16,12 +16,13 @@ categories: site content
 
 - скачиваем свежий релиз,
 - распаковываем в удобном для работы месте,
-- открываем окно командной строки в папке `rubyinstaller_dir\bin`
+- открываем окно командной строки в папке `rubyinstaller2_dir\bin`
 - выполняем команду `...\bin> ridk install`
 
-В результате получаем настроенную среду `ruby`. Дальнейший процесс вкратце описан на странице [Quickstart][https://jekyllrb.com/docs/]
+В результате получаем настроенную среду `ruby`. Дальнейший процесс вкратце описан на странице [Quickstart].
 
 [GitHub]: https://pages.github.com
 [rubyinstaller2]: https://github.com/oneclick/rubyinstaller2/releases
+[Quickstart]: https://jekyllrb.com/docs/
 
 
