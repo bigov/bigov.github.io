@@ -21,7 +21,7 @@
 title: TRICKRIG software project
 email: bigov AT_THE yandex.ru
 description: >- # this means to ignore newlines until "baseurl:"
-  Software project multiplatform OpenGL 3D engine.
+  Software project development 3D OpenGL multiplatform engine.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username:
