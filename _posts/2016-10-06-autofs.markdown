@@ -1,0 +1,43 @@
+---
+layout: post
+categories: site content
+date: 2016-10-06 05:49:47
+title: AutoFS
+---
+<p>
+Долго мучился с проблемой зависания файловой системы на точках монтирования к сетевым 
+шарам мастдая. Блокировка возникает при сетевых сбоях, когда сервер на какое-то время 
+оказывается недоступен по сети. Пробежал по "тусовкам" в интернете и выяснил, что этой 
+проблеме подвержены все основные Linux-дистрибутивы - Arch Linux, Gentoo, Ubuntu, Centos.
+</p><p>Особенно четко проблема проявляется при монтировании сетевых дисков через файл 
+"fstab" c использованием cifs. При этом система блокирует точку монтирования настолько глухо, 
+что не помогает даже команда "umount -f ..." от имени Рута. Ладно бы только это, но файловый 
+менеджер и все зависимые от него процессы в Иксах при такой ситуации тоже висят, что уже 
+создает неудобство для нормальной работы.
+</p><p>
+Оказывается, есть лекарство! Для монтирования таких ресурсов следует использовать утилиту 
+autofs. Подробности на <a 
+href="https://wiki.archlinux.org/index.php/Autofs_(%D0%A0%D1%83%D1%81%D1%81%D0%BA%D0%B
+8%D0%B9)">https://wiki.archlinux.org</a>
+</p><p>
+Нормальная работа достигается установкой пакета и парой строчек в конфигах:
+</p>
+<code>~/#
+~/# cat /etc/autofs/auto.master | grep media
+/media/fserver  /etc/autofs/auto.fserver
+
+~/#
+~/# cat /etc/autofs/auto.fserver | grep USER
+users -fstype=cifs,rw,uid=$USER,credentials=/home/$USER/.config/smb,iocharset=utf8 
+://192.168.100.2/users
+common -fstype=cifs,rw,uid=$USER,credentials=/home/$USER/.config/smb,iocharset=utf8 
+://192.168.100.2/common 
+
+~/#
+~/# mkdir /media/fserver/users
+~/# mkdir /media/fserver/common
+~/# systemctl enable autofs.service
+~/# systemctl start autofs.service
+~/#</code>
+
+

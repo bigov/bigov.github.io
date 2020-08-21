@@ -1,0 +1,14 @@
+---
+layout: post
+categories: site content
+date: 2016-07-22 00:49:20
+title: Антиспам
+---
+<p>Окончательно закрыл форму регистрации на сайте. Теперь регистрироваться можно только 
+через сообщение администратору из контактной формы. Причина банальна: в 99.99% случаях 
+регистрируются аккаунты, которые через сервис <a target="_blank" 
+href="https://cleantalk.org/spambots-
+check?record=EMAIL@ADDRESS">https://cleantalk.org/spambots-check</a> уверенно определяются 
+как спамеры.</p>
+
+
