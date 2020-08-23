@@ -19,9 +19,7 @@ irrlicht. Кроме того, <a href="http://www.opennet.ru/opennews/art.shtml
 irrlicht. В нем улучшен рендеринг, появилась поддержка шейдеров, улучшена отрисовка 
 растительности, появилась трассировка хода лучей, отрисовка эффектов на основе частиц (soft 
 particles) с ускорением на GPU, реализация эффектов глубины поля зрения, улучшенный обсчет 
-освещения и ряд иных возможностей, характерных для современных движков 3D:
-
-{% youtube "https://youtu.be/nTmC40hi_FA" %}
+освещения и ряд иных возможностей, характерных для современных движков 3D: [youtube]
 
 Ссылки:
 - [исходники pyirrlicht]
@@ -38,3 +36,4 @@ particles) с ускорением на GPU, реализация эффекто
 [Сайт irrlicht]: http://irrlicht.sourceforge.net/
 [Статья про cpython на ibm.com]: https://www.ibm.com/developerworks/ru/library/l-python_details_06/
 [Статья по теме в Wiki]: http://en.wikibooks.org/wiki/Python_Programming/Game_Programming_in_Python
+[youtube]: https://youtu.be/nTmC40hi_FA
