@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "ru" }}">
+
+  {%- include head.html -%}
+
+  <body>
+
+<style>
+div.embed-container {
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+  border: 2px solid #CDCDCD;
+}
+.post-meta {
+  text-align: right;
+}
+p.author {
+  text-align: right;
+  font-family: regular;
+  font-size: 1.0em;
+  font-style: italic;
+  color: #444;
+}
+</style>
+
+    {%- include header.html -%}
+
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        {{ content }}
+      </div>
+    </main>
+
+    {%- include footer.html -%}
+
+  </body>
+
+</html>

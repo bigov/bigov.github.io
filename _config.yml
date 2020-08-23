@@ -22,7 +22,7 @@ encoding: UTF-8
 title: TRICKRIG
 email: bigov AT_THE yandex.ru
 description: >- # this means to ignore newlines until "baseurl:"
-  Software project development 3D OpenGL multiplatform engine.
+  Software development project of the multiplatform 3D OpenGL engine.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username:
@@ -34,7 +34,14 @@ paginate: 8
 plugins:
   - jekyll-feed
   - jekyll-paginate
-  
+  - jekyll-youtube
+
+defaults:
+  - scope:
+      path: "assets/img"
+    values:
+      image: true
+
 # Exclude from processing.
 # The following items will not be processed, by default.
 # Any item listed under the `exclude:` key here will be automatically added to
