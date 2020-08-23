@@ -19,7 +19,7 @@
 # in the templates via {{ site.myvariable }}.
 
 encoding: UTF-8
-title: TRICKRIG software project
+title: TRICKRIG
 email: bigov AT_THE yandex.ru
 description: >- # this means to ignore newlines until "baseurl:"
   Software project development 3D OpenGL multiplatform engine.
@@ -30,7 +30,8 @@ github_username: bigov
 
 # Build settings
 theme: minima
-paginate: 5
+#theme: jekyll-theme-architect
+paginate: 8
 plugins:
   - jekyll-feed
   - jekyll-paginate
