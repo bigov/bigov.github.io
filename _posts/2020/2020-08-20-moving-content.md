@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Перенос сайта на GitHub"
+title:  "Переезд на GitHub"
 date:   2020-08-20 12:59:0 +0900
 categories: site content
 ---
