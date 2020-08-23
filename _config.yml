@@ -29,8 +29,7 @@ twitter_username:
 github_username: bigov
 
 # Build settings
-theme: jekyll-theme-leap-day
-#theme: jekyll-theme-architect
+theme: minima
 paginate: 8
 plugins:
   - jekyll-feed
