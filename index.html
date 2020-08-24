@@ -15,7 +15,7 @@ layout: default
 }
 </style>
 
-<H1>Лента событий</H1>
+<H1 style="widht:100%; color: #FFF; background-color: #444; padding: 12px; text-align: center;">Лента событий</H1>
 
 <!-- This loops through the paginated posts -->
 {% for post in paginator.posts %}
@@ -35,17 +35,17 @@ layout: default
 {% endfor %}
 
 <!-- Pagination links -->
-<div class="pagination" style="text-align: center;">Листать
+<div class="pagination" style="text-align: center;">
   {% if paginator.previous_page %}
     <a href="{{ paginator.previous_page_path }}" class="previous">
-      &lt;&lt; предыдущая &lt;&lt;
+      &lt;&lt; предыдущая
     </a>
   {% endif %}
   <span class="page_number ">
     страница: {{ paginator.page }} из {{ paginator.total_pages }}
   </span>
   {% if paginator.next_page %}
-    <a href="{{ paginator.next_page_path }}" class="next">&gt;&gt; следующая &gt;&gt;</a>
+    <a href="{{ paginator.next_page_path }}" class="next">следующая &gt;&gt;</a>
   {% endif %}
 </div>
 
