@@ -27,7 +27,7 @@ layout: default
     {% capture anonce %}{{ post.content | truncatewords: 80 }}{% endcapture %}
     {{ anonce }}
     {% if anonce != post.content %}
-      <a href="{{ post.url }}">[&nbsp;читать&nbsp;далее&nbsp;]</a>&nbsp;...
+      <a href="{{ post.url }}">[&nbsp;продолжение&nbsp;]</a>
     {% endif %}
   </div>
   <hr style="border: 0; height: 1px; background-color: #DEDEDE;">
