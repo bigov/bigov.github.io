@@ -18,6 +18,43 @@ categories: site content
 - открываем окно командной строки в папке `rubyinstaller2_dir\bin`
 - выполняем команду `...\bin> ridk install`
 
+С сайта [rubyinstaller2] скачиваем и запускаем инсталятор свежего релиза `rubyinstaller + devkit`. При установке я отключил опцию "установить MSYS2", так как он уже устанвлен в моей системе
+
+Если устанавливать `MSYS2`, предлагаемый в составе `rubyinstaller2`, то его следует обновить. Процесс оказался нетривиальный из-за проблемы с PGP ключами, которые устарели и оказались нерабочими. Чтобы их обновить пришлось выполнять следующее (описание на [msys2.org]) :
+
+```
+$ curl -O http://repo.msys2.org/msys/x86_64/msys2-keyring-r21.b39fb11-1-any.pkg.tar.xz
+$ curl -O http://repo.msys2.org/msys/x86_64/msys2-keyring-r21.b39fb11-1-any.pkg.tar.xz.sig
+$ pacman-key --verify msys2-keyring-r21.b39fb11-1-any.pkg.tar.xz.sig
+$ pacman -U --config <(echo) msys2-keyring-r21.b39fb11-1-any.pkg.tar.xz
+$ rm -r /etc/pacman.d/gnupg/
+$ pacman-key --init
+$ pacman-key --populate msys2
+$ pacman -Syu
+```
+
+После закрытия терминала процесс в памяти зависает и msys2.exe невозможно запустить, пока не будет выполнена команда:
+
+```
+С:\> taskkill /f /fi "MODULES eq msys-2.0.dll"
+
+```
+
+После этого повторно запускаем обновление msys2:
+
+```
+$ pacman -Syu
+```
+
+Устанавливаем `jekyll`:
+
+
+```
+С:\> gem install bundler
+С:\> gem install jekyll
+С:\> gem update
+```
+
 В результате получаем настроенную среду `ruby`. Дальнейший процесс вкратце описан на странице [Quickstart].
 
 Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll Talk][jekyll-talk].
@@ -28,5 +65,5 @@ Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most ou
 [GitHub]: https://pages.github.com
 [rubyinstaller2]: https://github.com/oneclick/rubyinstaller2/releases
 [Quickstart]: https://jekyllrb.com/docs/
-
+[msys2.org]: https://www.msys2.org/news/#2020-06-29-new-packagers
 
