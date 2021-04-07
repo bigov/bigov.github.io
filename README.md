@@ -1,4 +1,3 @@
 # bigov.github.io
-[bigov.project][https://bigov.github.io]
 
-Официальный сайт проекта `TrickRig`
+https://bigov.github.io - типа "Официальный сайт" проекта `TrickRig`
